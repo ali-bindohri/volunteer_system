@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+    transition: all.2s linear;
+
+}
+
+.join-issue-img{
+    border-radius: 3px;
+    width: 470px;
+    height: 330px;
+    margin-bottom: 10px;
+}
+.join-container2{
+    position: relative;
+    
+}
+.row{
+    flex-flow: row nowrap;
+}
+.join-container{
+    width: min-content;
+    margin: 10px;
+}
+.support-join-btns{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+.support-join-btns > div{
+    margin: 5px;
+}
+.join-issue-info span{
+    text-decoration: none;
+}
+.join-issue-info{
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    padding: 0 0 30px 30px;
+    top: 0;
+    height: 97%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 1.3rem;
+    transition: .4s ease-out; 
+    border-radius: 3px;
+    
+}
+.join-container2:hover .join-issue-info,
+.join-container2:focus .join-issue-info{
+    transition: .4s ease-out; 
+    display: flex;
+    
+}
+.blog-card-caption{
+    color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+.blog-card-caption span{
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+
+}
+
+// Box support
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.model-container, .model-container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.3);
+
+    transform: scale(0);
+}
+.model-container .model, .model-container2 .model2{
+height: 400px;
+width: 50%;
+margin: 0 10px;
+padding: 20px;
+background: #fff;
+border-radius: 5px;
+text-align: center;
+position: relative;
+
+}
+
+// .model-container2{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     min-height: 100%;
+//     width: 100%;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     // background: rgba(0,0,0,.3);
+
+//     transform: scale(0);
+// }
+// .model-container2 .model2{
+// height: 400px;
+// width: 50%;
+// margin: 0 10px;
+// padding: 20px;
+// background: #fff;
+// border-radius: 5px;
+// text-align: center;
+// position: relative;
+
+// }
+
+.model .fa-home{
+    font-size: 30px;
+    color: #4d90fe;
+    padding-bottom: 50px;
+    /* margin: 10px 0; */
+    top: 15px;
+
+    float:left;
+    transform: rotate(-0.10turn);
+   
+}
+h3{
+color:black;
+font-size: 25px;
+}
+p{
+    color: black;
+    margin: 20px 0;
+}
+.model button, .model2 button{
+    width: 100px;
+    height: 50px;
+    /* background: #4d90fe; */
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    cursor: pointer;
+    /* margin-top:35%; */
+    float:left;
+
+    
+}
+button{
+    background: #4d90fe;
+
+}
+.model-container .model button:hover,
+.model-container2 .model2 button:hover{
+opacity: .8;
+}
+
+.model-container .model .fa-times,
+.model-container2 .model2 .fa-times{
+position: absolute; 
+top: 15px;
+right: 15px;  
+font-size: 25px; 
+cursor: pointer;
+color:black;
+
+}
+
+.matt{
+   /* transform: scale(0); */
+   display:none;
+    // margin-right:20%;
+    margin-left:0;
+   
+   
+}
+.sel{
+    display: inline;
+    width: auto;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #858796;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d1d3e2;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .35rem;
+    float: left;
+}
+.btn-money{
+    margin-top: 40px;
+    float: left;
+    margin-right: 100%;
+}
+
+div .main{
+  padding-bottom:50px
+}
+.off{
+  width: 50px;
+  height:20px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #fff;
+
+}
+.on{
+  width: 50px;
+  height:20px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: rgb(50, 150, 250);
+
+}

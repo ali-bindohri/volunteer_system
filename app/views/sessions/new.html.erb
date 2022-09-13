@@ -1,0 +1,82 @@
+
+
+<div class="card shadow-lg o-hidden border-0 my-5">
+    <div class="card-body p-0">
+        <div class="row">
+            <div class="col-lg-12 offset-lg-0">
+                <div class="p-5">
+                    <div class="text-center">
+                        <h4 class="text-dark mb-4">Create an Account!</h4>
+                    </div>
+                    <form class="user" action="/user" method="POST">
+                        <input type='hidden' name='authenticity_token' value="<%= form_authenticity_token%>">
+                        <div class="row mb-3">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input class="form-control form-control-user" type="text" id="exampleFirstName"
+                                    placeholder="First Name" name="user[first_name]">
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="form-control form-control-user" type="text" id="exampleFirstName"
+                                    placeholder="Last Name" name="user[last_name]">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input class="form-control form-control-user" type="text" id="exampleInputEmail"
+                                    aria-describedby="emailHelp" placeholder="Username"
+                                    name="user[username]">
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="form-control form-control-user" type="number" id="examplephone"
+                                    placeholder="Phone Number" name="user[phone]">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input class="form-control form-control-user" type="password"
+                                    id="examplePasswordInput" placeholder="Password" name="user[password]">
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="form-control form-control-user" type="password"
+                                    id="exampleRepeatPasswordInput" placeholder="Repeat Password">
+                            </div>
+                        </div>
+                        <div class="location-new-user">
+                            <div id="floating-label-1" class="form-floating mb-3">
+                                <select  class="form-select form-select" for="floatinginput" placeholder="HGsOFT" >
+                                    <%@gover=Governorate.all%>
+                                    <option></option>
+                                    <% @gover.each do |go| %>
+                                           <option value="<%= go.id%>">
+                                                <%=go.name%>
+                                            </option>
+                                    <% end %>
+                                </select>
+                                <label class="form-label" id="floating-label-2"
+                                    for="floatinginput">Governorates...</label>
+                            </div>
+                             <div id="floating-label-1" class="form-floating mb-3">
+                                <%@city=City.all%>
+                                <select class="form-select form-select" name="user[city_id]">
+                                    <option></option>
+                                    <% @city.each do |ct| %>
+                                               <option value="<%=ct.id%>">
+                                                    <%=ct.name%>
+                                                </option>
+                                        <% end %>
+                                </select>
+                                <label class="form-label" id="floating-label-2"
+                                    for="floatinginput">Cities...</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary d-block btn-user width-50 mb-3" type="submit">Register
+                            Account</button>
+                    </form>
+                    <div class="text-center">
+                        <a class="small" href="/login">Already have an account!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

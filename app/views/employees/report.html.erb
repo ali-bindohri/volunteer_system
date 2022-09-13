@@ -1,0 +1,42 @@
+
+<div class="col-md-6">
+  <div class="text-md-end dataTables_filter " id="dataTable_filter"><label class="form-label">
+    <%= form_tag('/report', :method=>'get') do%>
+        <%=text_field_tag :first_name, params[:first_name], class:" form-control-sm",placeholder:"Search"%>
+      <% if User.find_by(:id=>session[:user_id],:user_type=>"Admin")%>
+        <%= select_tag :type, options_for_select([ "","Volunteer", "Employee" ],params[:type])%>
+     <% end %>
+        <button class="btn btn-primary py-0"><i class="fas fa-search"></i></button>
+    <%end%>
+    </label>
+    </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+ 
+      <th ccope= "col">Full Name</th>
+      <th scope="col">supported money</th>
+      <th scope="col">supported material </th>
+      <th scope="col">supmitted issues</th>
+      <th scope="col">joined issues</th>
+      <th scope="col">fixed issues</th>
+      
+
+    </tr>
+  </thead>
+  <tbody>
+  
+    <% for i in @users%>
+    <tr>
+      <td><%= i.first_name%> <%= i.last_name%></td>
+      <td><%= AcceptMoney.where(:sup_id=>i.id).count%></td>
+      <td><%= AcceptMat.where(:sup_id=>i.id).count%></td>
+      <td><%= Problem.where(:user_id=>i.id).count%></td>
+      <td><%= JoinIssue.where(:user_id=>i.id).count%></td>
+      <td><%= FixedIssue.where(:user_id=>i.id).count%></td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
